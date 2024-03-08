@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone seach by API</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <header>
+        <h1 class="text-5xl text-center font-bold bg-gray-100 p-4 my-3">Hunting Phone</h1>
+    </header>
+    <main>
+        <section>
+            <!-- first search button  -->
+            <input type="text" id="phone-name" placeholder="Enter your phone name" class="input input-bordered input-primary w-full max-w-xs ml-4 bg-gray-200 my-2 p-2" /><button onclick="clickHander()" class="btn btn-success m-2 py-2 px-4">Search</button>
+            <!-- another search button  -->
+            <input type="text" id="phone-name2" placeholder="Search here" class="input input-bordered input-primary w-full max-w-xs ml-4 bg-gray-200 my-2 p-2" /><button onclick="clickHander2()" class="btn btn-primary m-2 py-2 px-4">Search</button>
+        </section>
+        <section class="ml-4">
+            <div id="load-spinner" class="text-center my-4 hidden">
+                <span class="loading loading-spinner text-primary"></span>
+                <span class="loading loading-spinner text-secondary"></span>
+                <span class="loading loading-spinner text-accent"></span>
+                <span class="loading loading-spinner text-neutral"></span>
+                <span class="loading loading-spinner text-info"></span>
+                <span class="loading loading-spinner text-success"></span>
+                <span class="loading loading-spinner text-warning"></span>
+                <span class="loading loading-spinner text-error"></span>
+            </div>
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                
+            </div>
+            <!-- show all button  -->
+            <div id="show-container" class="my-2 text-center hidden">
+                <button onclick="handleShowAll()" class="btn btn-accent py-2">Show All</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/phone.js"></script>
+    <script src="js/another.js"></script>
+</body>
+</html>
